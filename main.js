@@ -41,3 +41,22 @@ const swiper = new Swiper('.swiper-container', {
   mousewheel: true,
   keyboard: true
 })
+
+/* ScroolReveal: Mostrar elementos quando der scroll na página */
+const scrollReveal = ScrollReveal({
+  origin: 'top',
+  distance: '30px',
+  duration: 700,
+  reset: true /*Ficará fazendo a animação sempre */
+})
+
+scrollReveal.reveal(
+  `
+  #home .image, #home .text,
+  #about .image, #about .text,
+  #services header, #services .card,
+  #testimonials header, #testimonials .testimonials
+  #contact .text, #contact .links
+  `,
+  { interval: 100 }
+)
